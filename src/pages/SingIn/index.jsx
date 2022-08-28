@@ -11,9 +11,9 @@ export function SingIn() {
             <h1>RocketMovies</h1>
             <p>Aplicação para acompanhar tudo que assistir</p>
             <h2>Faça seu login</h2>
-            <Input type="text" placeholder="Email" icon={FiMail} />
-            <Input type="password" placeholder="Senha" icon={FiLock} />
-            <Button title="Entrar" />
+            <Input type="email" placeholder="Email" required icon={FiMail} />
+            <Input type="password" placeholder="Senha" required icon={FiLock} />
+            <Button title="Entrar" type="submit"/>
             <Link to="/register">Criar conta</Link>
          </Form>
          <Background />

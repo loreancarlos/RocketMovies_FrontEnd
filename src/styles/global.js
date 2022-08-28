@@ -11,10 +11,28 @@ export default createGlobalStyle`
       box-sizing: border-box;
    }
    
+   main,body{
+      overflow: auto;
+   }
+
+   main::-webkit-scrollbar,body::-webkit-scrollbar {
+      width: 0.8rem;
+   }
+
+   main::-webkit-scrollbar-track,body::-webkit-scrollbar-track {
+      background: transparent;
+   }
+
+   main::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.COLORS.PINK};
+      border-radius: 0.8rem;
+   }
+
    body{
-      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
       color: ${({ theme }) => theme.COLORS.WHITE};
       font-size: 1.6rem;
+
    }
    
    body,button,input,textarea{

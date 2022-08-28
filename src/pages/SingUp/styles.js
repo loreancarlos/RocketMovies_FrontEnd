@@ -35,8 +35,17 @@ export const Form = styled.form`
    }
 
    >a{
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
       margin-top: 4.2rem;
       color: ${({ theme }) => theme.COLORS.PINK};
+
+      >svg{
+            width: 1.6rem;
+            height: 1.6rem;
+         }
    }
 `;
 
@@ -44,4 +53,7 @@ export const Background = styled.div`
    flex: 1;
    background: url(${bgSingIn}) no-repeat center center;
    background-size:cover;
+`;
+
+export const Link = styled.link`
 `;
