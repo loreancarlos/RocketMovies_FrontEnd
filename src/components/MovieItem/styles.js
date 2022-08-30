@@ -17,9 +17,10 @@ export const Container = styled.div`
       background: none;
       display: flex;
       align-items: center;
-      
+
       >svg{
          font-size: 2rem;
+         color: ${({ theme }) => theme.COLORS.PINK};
       }
    }
 
@@ -33,7 +34,7 @@ export const Container = styled.div`
 
    >input{
       height: 5.6rem;
-      width: 100%;
+      width: 14rem;
 
       padding: 1.2rem;
       color: ${({ theme }) => theme.COLORS.WHITE};

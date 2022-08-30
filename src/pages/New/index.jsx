@@ -6,35 +6,39 @@ import { MovieItem } from "../../components/MovieItem";
 import { Button } from "../../components/Button";
 import { Link } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
+import { Section } from "../../components/Section";
+import { MovieTag } from "../../components/MovieTag";
 
 export function New() {
    return (
       <Container>
          <Header />
+         <Link to="/">
+            <FiArrowLeft />
+            Voltar
+         </Link>
          <main>
-            <Form>
-               <header>
-                  <Link to="/">
-                     <FiArrowLeft />
-                     Voltar
-                  </Link>
-                  <h1>Novo Filme</h1>
-               </header>
-               <Input placeholder="Titulo" />
+            <Form id="newMovie">
+               <h1>Novo Filme</h1>
+               <div>
+                  <Input placeholder="Titulo" />
+                  <Input placeholder="Sua nota (0 a 5)" />
+               </div>
                <Textarea placeholder="Observações" />
-             {/*   <Section title="Links úteis">
-                  <NoteItem value="https://google.com.br" />
-                  <NoteItem isNew placeholder="Novo link" />
-               </Section> */}
-              {/*  <Section title="Marcadores">
-                  <div className="tags">
-                     <NoteItem value="react" />
-                     <NoteItem isNew placeholder="Nova tag" />
+               <Section title="Marcadores">
+                  <div>
+                     <MovieTag value="React" />
+                     <MovieTag value="https://google.com.br" />
+                     <MovieTag value="https://google.com.br" />
+                     <MovieItem isNew placeholder="Novo marcador" />
                   </div>
-               </Section> */}
-               <Button title="Salvar" />
+               </Section>
             </Form>
          </main>
+         <footer>
+            <Button title="Excluir Filme" />
+            <Button form="newMovie" title="Salvar Alterações" />
+         </footer>
       </Container>
    );
 };

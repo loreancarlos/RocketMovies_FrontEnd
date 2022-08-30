@@ -31,13 +31,12 @@ export default createGlobalStyle`
    body{
       background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
       color: ${({ theme }) => theme.COLORS.WHITE};
-      font-size: 1.6rem;
-
    }
    
-   body,button,input,textarea{
+   body,button,input,textarea,a{
       font-family: 'Roboto Slab', serif;
       outline: none;
+      font-size: 1.6rem;
    }
 
    a{
