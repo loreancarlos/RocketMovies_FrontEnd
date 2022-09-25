@@ -8,9 +8,10 @@ export const Container = styled.div`
 
    width: 100%;
    height: 100vh;
+   padding: 0 12rem;
 
    background-color:${({ theme }) => theme.COLORS.BACKGROUND_900};
-   padding: 0 12rem;
+   
    >div{
       display: flex;
       justify-content:space-between;

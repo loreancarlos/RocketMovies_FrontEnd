@@ -9,7 +9,7 @@ export const Container = styled.header`
    
    border-bottom: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
    width: 100%;
-   height:  11.6rem;
+   min-height:  11.6rem;
 
    >a{
       >h2{
@@ -37,18 +37,13 @@ export const Profile = styled.div`
    >div{
       display: flex;
       flex-direction: column;
+      align-items: flex-end;
       text-align: end;
       justify-content: center;
       flex: 1;
 
       >strong{
          font-weight: 700;
-         font-size: 1.4rem;
-      }
-
-      >a{
-         color: ${({ theme }) => theme.COLORS.GRAY_300};
-         font-weight: 400;
          font-size: 1.4rem;
       }
    }
@@ -60,4 +55,13 @@ export const Profile = styled.div`
          border-radius: 50%;
       }
    }
+`;
+
+export const Button = styled.button`
+   width: max-content;
+   border: none;
+   background-color: transparent;
+   color: ${({ theme }) => theme.COLORS.GRAY_300};
+   font-weight: 400;
+   font-size: 1.4rem;
 `;

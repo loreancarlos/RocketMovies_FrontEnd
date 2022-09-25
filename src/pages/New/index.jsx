@@ -2,7 +2,7 @@ import { Container, Form } from "./styles";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
-import { MovieItem } from "../../components/MovieItem";
+import { MovieNewItem } from "../../components/MovieNewItem";
 import { Button } from "../../components/Button";
 import { Link } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
@@ -29,8 +29,8 @@ export function New() {
                   <div>
                      <MovieTag value="React" />
                      <MovieTag value="https://google.com.br" />
-                     <MovieTag value="https://google.com.br" />
-                     <MovieItem isNew placeholder="Novo marcador" />
+                     <MovieTag value="https://uol.com.br" />
+                     <MovieNewItem placeholder="Novo marcador" />
                   </div>
                </Section>
             </Form>

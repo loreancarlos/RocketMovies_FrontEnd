@@ -6,7 +6,7 @@ export function MovieTag({ value, onClick, ...rest }) {
       <Container>
          <div>{value}</div>
          <button type="button" onClick={onClick}>
-            <FiX />
+            <FiX size={24}/>
          </button>
       </Container>
    );

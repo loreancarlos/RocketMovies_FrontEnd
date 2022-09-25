@@ -15,6 +15,7 @@ export const Container = styled.div`
    height: 5.6rem;
 
    >div{
+      line-height: 1.6rem;
       color: ${({ theme }) => theme.COLORS.WHITE};
       background-color: transparent;
       margin-right: 1.2rem;

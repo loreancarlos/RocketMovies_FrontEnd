@@ -1,8 +1,16 @@
-import { Container, Profile } from "./styles";
+import avatarPlaceholder from "../../assets/avatarPlaceholder.svg";
+import { Container, Profile, Button } from "./styles";
+import { useAuth } from "../../hooks/auth";
 import { Input } from "../Input";
 import { Link } from "react-router-dom";
+import { api } from "../../services/api";
 
 export function Header() {
+   const { signOut, user } = useAuth();
+   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+   const { name } = user;
+   const nameAndSubName = name.split(" ").slice(0, 2).join(" ");
+
    return (
       <Container>
          <Link to="/">
@@ -11,13 +19,13 @@ export function Header() {
          <Input type="text" placeholder="Pesquisar pelo título" />
          <Profile>
             <div>
-               <strong>Lorean Carlos</strong>
-               <Link to="/logout">
+               <strong>{nameAndSubName}</strong>
+               <Button onClick={signOut}>
                   <span>sair</span>
-               </Link>
+               </Button>
             </div>
             <Link to="/profile">
-               <img src="https://github.com/loreancarlos.png" alt="Foto do usuário" />
+               <img src={avatarUrl} alt={user.name} />
             </Link>
          </Profile>
       </Container>

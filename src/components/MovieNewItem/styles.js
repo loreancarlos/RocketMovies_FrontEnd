@@ -4,10 +4,10 @@ export const Container = styled.div`
    display: flex;
    align-items: center;
 
-   background-color: ${({ theme, isNew }) => isNew ? "transparent" : theme.COLORS.BACKGROUND_900};
+   background-color: transparent;
    color: ${({ theme }) => theme.COLORS.GRAY_300};
 
-   border: ${({ theme, isNew }) => isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : "none"};
+   border: ${`2px dashed`};
    margin-bottom: 0.8rem;
    border-radius: 1rem;
    padding-right: 1.2rem;
@@ -23,15 +23,7 @@ export const Container = styled.div`
          color: ${({ theme }) => theme.COLORS.PINK};
       }
    }
-
-   .button-add{
-      color: ${({ theme }) => theme.COLORS.ORANGE};
-   }
-
-   .button-delete{
-      color: ${({ theme }) => theme.COLORS.RED};
-   }
-
+   
    >input{
       height: 5.6rem;
       width: 14rem;
