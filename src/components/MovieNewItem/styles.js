@@ -25,10 +25,10 @@ export const Container = styled.div`
    }
    
    >input{
-      height: 5.6rem;
+      height: 5.2rem;
       width: 14rem;
 
-      padding: 1.2rem;
+      padding: 0.8rem 1.2rem;
       color: ${({ theme }) => theme.COLORS.WHITE};
       background-color: transparent;
       border: 0;
